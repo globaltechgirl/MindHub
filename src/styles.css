@@ -1,0 +1,454 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(100deg, rgb(255, 255, 255) 100%, rgb(211, 117, 150) 100%);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background: #F4ACB7;
+    z-index: 1000;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background: #F4ACB7;
+}
+
+nav {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #F4ACB7;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo  a{
+    font-size: 40px;
+    font-weight: 500;
+    color: #dd7596;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+
+nav ul li {
+    margin: 0 5px;
+    list-style: none;
+    padding-left: 50px;
+}
+
+ul li a {
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+ul li a::before {
+    content: '';
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    transform: translateX(50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+} 
+
+ul li:hover a::before {
+    opacity: 1;
+}
+
+.menu-button .menu-btn {
+    font-size: 17px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #dd7596;
+    color: #f9d4dc;
+    transition: all 200ms ease-in-out;
+}
+
+.menu-button .menu-btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    color: #dd7596;
+    background: #f9d4dc;
+    border: 2px solid #dd7596;
+}
+
+.details {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+
+.details h1 {
+    color: #333;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.details h1 span {
+    color: #F4ACB7;
+    font-size: 60px;
+}
+
+.details h1 .process {
+    text-decoration: underline wavy #F4ACB7;
+    font-size: 55px;
+}
+
+.details h2 {
+    color: #263238; 
+    font-size: 20px;
+    width: 500px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.schedule-btn {
+    font-size: 17px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    border: 2px solid #dd7596;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    background: #f9d4dc;
+    color: #dd7596;
+    transition: all 200ms ease-in-out;
+    box-shadow: 10px 10px 20px rgba(245, 105, 147, 0.2);
+    transition: all 200ms ease-in-out;
+}
+
+.schedule-btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    background: #dd7596;
+    color: #f9d4dc;
+    border: 2px solid #dd7596;
+}
+
+.figure {
+    color: #dd7596;
+    background: #f9d4dc;
+    border: 2px solid #dd7596;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px 8px;
+    padding-top: 8px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.figure-text {
+    font-size: 18px;
+    color: #dd7596;
+    font-weight: 700;
+    padding-left: 4px;
+}
+
+.words {
+    padding-top: 40px;
+    color: #455a64;
+}
+
+.image img {
+    display: block;
+    height: auto;
+    position: absolute;
+    bottom: 30px;
+    right: 150px;
+    width: 40%;
+    height: 85%;
+}
+
+.swiper-text  {
+    padding-top: 48%;
+    text-align: center;
+}
+
+.swiper-text h1 {
+    color: #dd7596;
+    padding-top: 30px;
+    font-size: 50px;
+}
+
+.swiper-text h2 {
+    padding-top: 20px;
+    color: #455a64;
+    font-size: 30px;
+}
+
+.swiper {
+    font-family: "Poppins", sans-serif;
+    padding-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 90%;
+    padding-bottom: 100px;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 35em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 25em;
+    height: 105%;
+    background: #fff;
+    border-radius: 2em;
+    box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+    padding: 2em 1em;
+    display: flex;
+    align-items: center;
+    margin: 0 2em;
+    flex-direction: column;
+}
+
+.card-image {
+    width: 16em;
+    height: 16em;
+    border-radius: 50%;
+    border: 5px solid #F4ACB7;
+    padding: 3px;
+    margin-bottom: 1em;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: center;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
+    top: .2em;
+    text-align: center;
+}
+
+.card-name {
+    color: #dd7596;
+    text-align: center;
+    padding-top: .5em;
+}
+
+.card-text {
+    text-align: center;
+    font-size: 1rem;
+    margin: 1em 0;
+}
+
+.card-btn {
+    background: #f9d4dc;
+    color: #dd7596;
+    border: 2px solid #dd7596;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: .5em;
+    border-radius: .5em;
+    margin-top: .5em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card-btn:hover {
+    color: #f9d4dc;
+    background: #dd7596;
+    border: 2px solid #f9d4dc;
+}
+
+.nav-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transform: translateY(30px);
+    background: rgba(245, 105, 147, 0.2);
+    color: #dd7596;
+    border: 1px solid #dd7596;
+    transform: 0.2s;
+}
+
+.nav-btn:hover {
+    color: #F4ACB7;
+    background: #dd7596;
+    border: 2px solid #F4ACB7;
+}
+
+.nav-btn::after,
+.nav-btn::before{
+    font-size: 20px;
+}
+
+.swiper-pagination-bullet {
+    background: #dd7596;
+}
+
+.swiper-pagination-bullet-active {
+    background: #dd7596;
+}
+
+.personal-info {
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.personal-info h1 {
+    text-align: center;
+    color: #dd7596;
+    font-size: 50px;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    text-decoration: underline dotted #dd7596;
+}
+
+.personal-info h2 {
+    color: #263238;
+    font-size: 40px;
+    font-weight: 700;
+    padding-left: 300px;
+    padding-top: 18px;
+}
+
+.personal-info h2 span {
+    color: #dd7596;
+    font-size: 45px;
+}
+.personal-info p {
+    padding-left: 300px;
+    padding-top: 20px;
+    color: #263238;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.personal-info p .workshop {
+    color: #885df1;
+}
+
+.personal-info .greet {
+    color: #F4ACB7;
+    padding-left: 30px;
+    padding-left: 300px;
+    padding-top: 80px;
+    font-size: 30px;
+}
+
+.personal-info img {
+    display: block;
+    width: 350px;
+    margin-left: 1200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -300px;
+    object-position: 30% 30%;
+    height: 350px;
+}
+
+.media-icons .icons {
+    list-style: none;
+    display: flex;
+    padding-top: 60px;
+    justify-content: center;
+}
+
+.media-icons .icons li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.media-icons .icons i {
+    font-size: 50px;
+    color: #dd7596;
+    background: #F4ACB7;
+    border: 2px solid #dd7596;
+    border-radius: 50px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.media-icons .icons li:hover i {
+    width: 200px;
+    background: #F4ACB7;
+}
+
+.media-icons .icons li .icon-text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    color: #dd7596;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 40px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.media-icons .icons li:hover .icon-text {
+    opacity: 4;
+}
+
+.code-details {
+    font-family: monospace;
+    padding-top: 60px;
+    padding-bottom: 55px;
+    font-size: 15px;
+    text-decoration-line: underline;
+    text-decoration-color: #455a64;
+    text-align: center;
+}
+
+.code-details a {
+    font-family: monospace;
+    color: #dd7596;
+    text-decoration-line: underline;
+    text-decoration-color: #dd7596;
+}
